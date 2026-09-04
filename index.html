@@ -54,20 +54,8 @@
 <div id="sidebar"></div>
 <div id="content"><div id="empty-state">Select a topic</div></div>
 
+<script src="topics.js"></script>
 <script>
-    // TEMPORARY: inlined directly rather than loaded from topics.js, to
-    // isolate whether Quick Look blocks external sibling files entirely or
-    // whether it was something specific to that reference. Revert once
-    // that's confirmed either way.
-    const TOPICS = [
-        {
-            category: "Test",
-            title: "Proof of concept",
-            instructions: "If you can see this on your phone, opened via Quick Look, and can tap this row, the page itself works. This version has the data baked in directly rather than loaded from topics.js, to check whether that separate file was the problem.",
-            clip: null
-        }
-    ];
-
     // Groups TOPICS by category, in the order they appear in the array —
     // reordering later is just reordering that array, nothing here changes.
     function groupedTopics() {

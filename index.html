@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Singing Help</title>
+<style>
+    * { box-sizing: border-box; }
+    html, body {
+        margin: 0; height: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+        background: #f2f2f7;
+    }
+    body { display: flex; }
+
+    /* Left: categories + topics, mailbox-style. */
+    #sidebar {
+        width: 300px; flex-shrink: 0;
+        background: #ffffff; border-right: 1px solid #d1d1d6;
+        overflow-y: auto; -webkit-overflow-scrolling: touch;
+    }
+    .category-label {
+        padding: 14px 16px 6px; font-size: 13px; font-weight: 600;
+        color: #8e8e93; text-transform: uppercase; letter-spacing: 0.03em;
+    }
+    .topic-row {
+        padding: 12px 16px; font-size: 17px; color: #1c1c1e;
+        border-bottom: 1px solid #f0f0f2; cursor: pointer;
+    }
+    .topic-row.selected { background: #007aff; color: #fff; }
+
+    /* Right: the selected topic's video (if any) + instructions. */
+    #content {
+        flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
+        padding: 28px 32px;
+    }
+    #content h1 { margin: 0 0 16px; font-size: 26px; }
+    #content video {
+        width: 100%; border-radius: 12px; background: #000;
+        display: block; margin-bottom: 20px;
+    }
+    #content p {
+        font-size: 18px; line-height: 1.5; color: #1c1c1e;
+        white-space: pre-wrap;
+    }
+    #empty-state {
+        display: flex; align-items: center; justify-content: center;
+        height: 100%; color: #8e8e93; font-size: 17px;
+    }
+</style>
+</head>
+<body>
+
+<div id="sidebar"></div>
+<div id="content"><div id="empty-state">Select a topic</div></div>
+
+<script>
+    // TEMPORARY: inlined directly rather than loaded from topics.js, to
+    // isolate whether Quick Look blocks external sibling files entirely or
+    // whether it was something specific to that reference. Revert once
+    // that's confirmed either way.
+    const TOPICS = [
+        {
+            category: "Test",
+            title: "Proof of concept",
+            instructions: "If you can see this on your phone, opened via Quick Look, and can tap this row, the page itself works. This version has the data baked in directly rather than loaded from topics.js, to check whether that separate file was the problem.",
+            clip: null
+        }
+    ];
+
+    // Groups TOPICS by category, in the order they appear in the array —
+    // reordering later is just reordering that array, nothing here changes.
+    function groupedTopics() {
+        const groups = [];
+        const byCategory = {};
+        for (const topic of TOPICS) {
+            if (!byCategory[topic.category]) {
+                byCategory[topic.category] = { category: topic.category, topics: [] };
+                groups.push(byCategory[topic.category]);
+            }
+            byCategory[topic.category].topics.push(topic);
+        }
+        return groups;
+    }
+
+    function render() {
+        const sidebar = document.getElementById("sidebar");
+        sidebar.innerHTML = "";
+        groupedTopics().forEach(group => {
+            const label = document.createElement("div");
+            label.className = "category-label";
+            label.textContent = group.category;
+            sidebar.appendChild(label);
+
+            group.topics.forEach(topic => {
+                const row = document.createElement("div");
+                row.className = "topic-row";
+                row.textContent = topic.title;
+                row.onclick = () => selectTopic(topic, row);
+                sidebar.appendChild(row);
+            });
+        });
+    }
+
+    function selectTopic(topic, row) {
+        document.querySelectorAll(".topic-row").forEach(el => el.classList.remove("selected"));
+        row.classList.add("selected");
+
+        const content = document.getElementById("content");
+        content.innerHTML = "";
+
+        const heading = document.createElement("h1");
+        heading.textContent = topic.title;
+        content.appendChild(heading);
+
+        if (topic.clip) {
+            const video = document.createElement("video");
+            video.src = "clips/" + topic.clip;
+            video.controls = true;
+            video.playsInline = true;
+            content.appendChild(video);
+        }
+
+        const body = document.createElement("p");
+        body.textContent = topic.instructions;
+        content.appendChild(body);
+    }
+
+    render();
+</script>
+</body>
+</html>

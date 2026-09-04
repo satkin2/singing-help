@@ -11,5 +11,11 @@ const TOPICS = [
         title: "Proof of concept",
         instructions: "If you can see this on your phone, the page loaded correctly and pulled this text in from a separate file (topics.js), same as it will for every real topic. Real content replaces this once GitHub Pages hosting is confirmed working end to end.",
         clip: null
+    },
+    {
+        category: "Test",
+        title: "Video clip test",
+        instructions: "A synthetic test pattern, not a real recording — just confirming a video file in clips/ loads and plays correctly when hosted for real.",
+        clip: "test-clip.mp4"
     }
 ];

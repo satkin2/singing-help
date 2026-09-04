@@ -13,9 +13,8 @@
 const TOPICS = [
     {
         category: "Capturing",
-        title: "Capture the Audio from a Video",
-        instructions: `*YouTube*
-        1. Open Safari.
+        title: "Go to the video",
+        instructions: `1. Open Safari.
         2. Go to YouTub.com.
         3. Search for the video you want to capture.
         4. When the video starts playing, press pause.`,

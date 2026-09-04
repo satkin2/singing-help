@@ -12,9 +12,13 @@
 
 const TOPICS = [
     {
-        category: "Test",
-        title: "Proof of concept",
-        instructions: `If you can see this on your phone, the page loaded correctly and pulled this text in from a separate file (topics.js), same as it will for every real topic. Real content replaces this once GitHub Pages hosting is confirmed working end to end.`,
+        category: "Capturing",
+        title: "Capture the Audio from a Video",
+        instructions: `*YouTube*
+        1. Open Safari.
+        2. Go to YouTub.com.
+        3. Search for the video you want to capture.
+        4. When the video starts playing, press pause.`,
         clip: null
     },
     {

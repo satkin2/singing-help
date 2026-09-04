@@ -37,5 +37,13 @@ const TOPICS = [
 
 Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
         clip: null
+    },
+    {
+        category: "Test",
+        title: "Script test topic",
+        instructions: `Testing the add-topic.sh script end to end.
+1. First line.
+2. Second line, with a "quote" and a \`backtick\` and a \$dollar sign.`,
+        clip: "script-test-topic.mp4"
     }
 ];

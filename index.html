@@ -105,6 +105,7 @@
             video.src = "clips/" + topic.clip;
             video.controls = true;
             video.playsInline = true;
+            video.loop = true;
             content.appendChild(video);
         }
 
@@ -125,6 +126,19 @@
     script.src = "topics.js?v=" + Date.now();
     script.onload = render;
     document.body.appendChild(script);
+
+    // A home-screen-bookmarked page on iOS gets suspended in the
+    // background rather than reloaded — reopening it resumes the exact
+    // page instance from before, so even the cache-busted load above never
+    // runs again until the page is actually reloaded. Force that reload
+    // whenever the page becomes visible again (with a `?r=` marker to
+    // avoid looping if the browser fires this again for the reloaded page
+    // itself before it's finished loading).
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible" && !location.search.includes("r=")) {
+            location.href = location.pathname + "?r=" + Date.now();
+        }
+    });
 </script>
 </body>
 </html>

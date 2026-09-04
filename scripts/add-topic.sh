@@ -1,14 +1,15 @@
 #!/bin/bash
 # Does the actual work behind the "Add Help Topic" Shortcut: compresses a
-# screen recording, appends a new entry to topics.js, commits, and pushes.
-# Kept as a real, testable script rather than logic buried inside the
-# Shortcut itself — the Shortcut just collects input and calls this.
+# screen recording (if there is one), appends a new entry to topics.js,
+# commits, and pushes. Kept as a real, testable script rather than logic
+# buried inside the Shortcut itself — the Shortcut just collects input and
+# calls this.
 #
-# Usage: add-topic.sh <recording-path> <title> <category> <instructions>
+# Usage: add-topic.sh <recording-path-or-"none"> <title> <category> <instructions>
 set -euo pipefail
 
 if [ "$#" -ne 4 ]; then
-    echo "Usage: add-topic.sh <recording-path> <title> <category> <instructions>" >&2
+    echo "Usage: add-topic.sh <recording-path-or-\"none\"> <title> <category> <instructions>" >&2
     exit 1
 fi
 
@@ -19,7 +20,12 @@ INSTRUCTIONS="$4"
 
 cd "$(dirname "$0")/.."   # repo root (Help/)
 
-if [ ! -f "$RECORDING" ]; then
+# Not every topic has a clip — the Shortcut passes the literal text "none"
+# (its own "no clip" branch) rather than a real path in that case.
+HAS_CLIP=true
+if [ "$RECORDING" = "none" ]; then
+    HAS_CLIP=false
+elif [ ! -f "$RECORDING" ]; then
     echo "No such recording: $RECORDING" >&2
     exit 1
 fi
@@ -28,19 +34,24 @@ fi
 # (this Mac, or Dad's), and either could be behind the other's last push.
 git pull --ff-only
 
-# Slugify the title for a filename, de-duplicating if it already exists
-# (e.g. two topics both called "Trimming a track").
-SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
-CLIP_NAME="${SLUG}.mp4"
-if [ -f "clips/$CLIP_NAME" ]; then
-    CLIP_NAME="${SLUG}-$(date +%s).mp4"
-fi
+CLIP_NAME=""
+if [ "$HAS_CLIP" = true ]; then
+    # Slugify the title for a filename, de-duplicating if it already exists
+    # (e.g. two topics both called "Trimming a track").
+    SLUG=$(echo "$TITLE" | tr '[:upper:]' '[:lower:]' | sed -E 's/[^a-z0-9]+/-/g; s/^-+|-+$//g')
+    CLIP_NAME="${SLUG}.mp4"
+    if [ -f "clips/$CLIP_NAME" ]; then
+        CLIP_NAME="${SLUG}-$(date +%s).mp4"
+    fi
 
-echo "Compressing to clips/$CLIP_NAME…"
-ffmpeg -y -nostdin -i "$RECORDING" \
-    -vf "scale=960:-2,fps=15" -an \
-    -c:v libx264 -crf 28 -preset slow -movflags +faststart \
-    "clips/$CLIP_NAME"
+    echo "Compressing to clips/$CLIP_NAME…"
+    ffmpeg -y -nostdin -i "$RECORDING" \
+        -vf "scale=960:-2,fps=15" -an \
+        -c:v libx264 -crf 28 -preset slow -movflags +faststart \
+        "clips/$CLIP_NAME"
+else
+    echo "No clip for this topic."
+fi
 
 # Escape for safe embedding: backslash first (so it doesn't double-escape
 # the characters escaped after it), then the delimiter(s) actually in use.
@@ -55,11 +66,12 @@ python3 - "$TITLE_ESC" "$CATEGORY_ESC" "$INSTRUCTIONS_ESC" "$CLIP_NAME" << 'PYEO
 import re, sys
 
 title, category, instructions, clip = sys.argv[1:5]
+clip_field = f'"{clip}"' if clip else "null"
 entry = f'''    {{
         category: "{category}",
         title: "{title}",
         instructions: `{instructions}`,
-        clip: "{clip}"
+        clip: {clip_field}
     }}'''
 
 with open("topics.js") as f:

@@ -4,6 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Singing Help</title>
+<!-- apple-touch-icon is what iOS actually uses for "Add to Home Screen" —
+     without it, Safari falls back to a generic tile made from the page's
+     first title letter (the "white S on grey" being replaced here). Same
+     source image as the app's own icon, so they visually match. -->
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
     * { box-sizing: border-box; }
     html, body {
@@ -47,12 +53,26 @@
         display: flex; align-items: center; justify-content: center;
         height: 100%; color: #8e8e93; font-size: 17px;
     }
+
+    /* Bookmarked as a home-screen icon, this page has no browser chrome at
+       all — no reload button, no way to pull-to-refresh reliably. This is
+       the only way to force fresh content on demand. */
+    #refresh-button {
+        position: fixed; top: 12px; right: 14px;
+        width: 34px; height: 34px; border-radius: 17px;
+        background: #ffffff; border: 1px solid #d1d1d6;
+        font-size: 17px; color: #007aff;
+        display: flex; align-items: center; justify-content: center;
+        cursor: pointer; z-index: 10;
+    }
+    #refresh-button:active { background: #e5e5ea; }
 </style>
 </head>
 <body>
 
 <div id="sidebar"></div>
 <div id="content"><div id="empty-state">Select a topic</div></div>
+<div id="refresh-button" onclick="forceReload()">⟳</div>
 
 <script>
     // Groups TOPICS by category, in the order they appear in the array —
@@ -127,16 +147,22 @@
     script.onload = render;
     document.body.appendChild(script);
 
+    // A genuinely fresh navigation (new query string each time, so nothing
+    // about this URL has ever been cached) — used both automatically and
+    // from the manual refresh button below.
+    function forceReload() {
+        location.href = location.pathname + "?r=" + Date.now();
+    }
+
     // A home-screen-bookmarked page on iOS gets suspended in the
     // background rather than reloaded — reopening it resumes the exact
     // page instance from before, so even the cache-busted load above never
     // runs again until the page is actually reloaded. Force that reload
-    // whenever the page becomes visible again (with a `?r=` marker to
-    // avoid looping if the browser fires this again for the reloaded page
-    // itself before it's finished loading).
+    // whenever the page becomes visible again (guarded so this doesn't
+    // loop on the reloaded page itself before it's finished loading).
     document.addEventListener("visibilitychange", () => {
         if (document.visibilityState === "visible" && !location.search.includes("r=")) {
-            location.href = location.pathname + "?r=" + Date.now();
+            forceReload();
         }
     });
 </script>

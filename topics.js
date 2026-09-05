@@ -44,5 +44,12 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         instructions: `Test A
 Will this be inline?`,
         clip: null
+    },
+    {
+        category: "Test",
+        title: "Test - with clip",
+        instructions: `Test B
+Video included`,
+        clip: "test-with-clip.mp4"
     }
 ];

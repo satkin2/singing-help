@@ -31,21 +31,5 @@ const TOPICS = [
 
 Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
         clip: null
-    },
-    {
-        category: "Testing",
-        title: "Test - No Clip",
-        instructions: `Test A`,
-        clip: null
-    },
-    {
-        category: "Testing",
-        title: "Test - With Clip",
-        instructions: `Test B
-1. Open Safari.
-2. Go to YouTub.com.
-3. Go to the video you want to capture.
-4. When the video begins playing, press pause.`,
-        clip: "test-with-clip.mp4"
     }
 ];

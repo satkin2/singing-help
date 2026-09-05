@@ -31,5 +31,11 @@ const TOPICS = [
 
 Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
         clip: null
+    },
+    {
+        category: "Testing",
+        title: "Test - No Clip",
+        instructions: `Test A`,
+        clip: null
     }
 ];

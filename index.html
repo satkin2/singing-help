@@ -24,6 +24,7 @@
         width: 300px; flex-shrink: 0;
         background: #ffffff; border-right: 1px solid #d1d1d6;
         overflow-y: auto; -webkit-overflow-scrolling: touch;
+        padding-top: 56px; /* clears the fixed refresh pill above it */
     }
     .category-label {
         padding: 14px 16px 6px; font-size: 13px; font-weight: 600;
@@ -56,12 +57,13 @@
 
     /* Bookmarked as a home-screen icon, this page has no browser chrome at
        all — no reload button, no way to pull-to-refresh reliably. This is
-       the only way to force fresh content on demand. */
+       the only way to force fresh content on demand. Sits over the list
+       it refreshes (top-left), not the content pane. */
     #refresh-button {
-        position: fixed; top: 12px; right: 14px;
-        width: 44px; height: 44px; border-radius: 22px;
+        position: fixed; top: 12px; left: 14px;
+        padding: 10px 20px; border-radius: 20px;
         background: #ffffff; border: 1px solid #d1d1d6;
-        font-size: 24px; color: #007aff;
+        font-size: 16px; font-weight: 600; color: #007aff;
         display: flex; align-items: center; justify-content: center;
         cursor: pointer; z-index: 10;
     }
@@ -72,7 +74,7 @@
 
 <div id="sidebar"></div>
 <div id="content"><div id="empty-state">Select a topic</div></div>
-<div id="refresh-button" onclick="forceReload()">⟳</div>
+<div id="refresh-button" onclick="forceReload()">Refresh</div>
 
 <script>
     // Groups TOPICS by category, in the order they appear in the array —
@@ -160,11 +162,18 @@
     // runs again until the page is actually reloaded. Force that reload
     // whenever the page becomes visible again (guarded so this doesn't
     // loop on the reloaded page itself before it's finished loading).
-    document.addEventListener("visibilitychange", () => {
+    //
+    // Two separate events, both guarded the same way, since testing found
+    // visibilitychange alone missed the "went to the Home Screen, then
+    // reopened the bookmark" case — pageshow specifically covers a page
+    // being restored from a suspended/cached state, which is exactly that.
+    function reloadIfStale() {
         if (document.visibilityState === "visible" && !location.search.includes("r=")) {
             forceReload();
         }
-    });
+    }
+    document.addEventListener("visibilitychange", reloadIfStale);
+    window.addEventListener("pageshow", reloadIfStale);
 </script>
 </body>
 </html>

@@ -15,9 +15,9 @@ const TOPICS = [
         category: "Capturing",
         title: "Go to the video",
         instructions: `1. Open Safari.
-        2. Go to YouTub.com.
-        3. Search for the video you want to capture.
-        4. When the video starts playing, press pause.`,
+2. Go to YouTube.com.
+3. Search for the video you want to capture.
+4. When the video starts playing, press pause.`,
         clip: null
     },
     {

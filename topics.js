@@ -18,7 +18,7 @@ const TOPICS = [
 2. Go to YouTube.com.
 3. Search for the video you want to capture.
 4. When the video starts playing, press pause.`,
-        clip: null
+        clip: "go-to-the-video.mp4"
     },
     {
         category: "GarageBand",
@@ -31,14 +31,5 @@ const TOPICS = [
 
 Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
         clip: null
-    },
-    {
-        category: "Capturing",
-        title: "Go to the video",
-        instructions: `1. Open Safari.
-2. Go to YouTube.com.
-3. Search for the video you want to capture.
-4. When the video starts playing, press pause.`,
-        clip: "go-to-the-video.mp4"
     }
 ];

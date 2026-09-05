@@ -51,5 +51,12 @@ Will this be inline?`,
         instructions: `Test B
 Video included`,
         clip: "test-with-clip.mp4"
+    },
+    {
+        category: "Test",
+        title: "Test - Auto refresh",
+        instructions: `Test C
+Is this there on the auto refresh?`,
+        clip: null
     }
 ];

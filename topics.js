@@ -104,5 +104,16 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "Last Interface Error",
         instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
         clip: "last-interface-error.mp4"
+    },
+    {
+        category: "Importing",
+        title: "Entering the artist and song for an import",
+        instructions: `Same idea as capturing — the details you type in are how the import gets named and filed.
+
+1. Click "Import a Downloaded Backing Track".
+2. Type the artist's name.
+3. Type the song title.
+4. Click "Import".`,
+        clip: "entering-the-artist-and-song-for-an-import.mp4"
     }
 ];

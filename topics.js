@@ -76,5 +76,11 @@ Only do this to the Backing track, not your own recording — shifting a real vo
 4. When the video starts playing, press pause.
 5. Switch back to Singing Capture and click "Capture from a Video".`,
         clip: "go-to-the-video-1789298638.mp4"
+    },
+    {
+        category: "Troubleshooting",
+        title: "Last Interface Error",
+        instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
+        clip: "last-interface-error.mp4"
     }
 ];

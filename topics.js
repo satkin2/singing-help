@@ -193,5 +193,14 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 3. Plug in your headphones to the Scarlett.
 4. Turn on Direct Monitor.`,
         clip: null
+    },
+    {
+        category: "Recording",
+        title: "Setting levels",
+        instructions: `1. Turn the Gain to around 2:30.
+2. Get about 6-8” from the microphone and speak normally.
+3. You should hear yourself in the headphones.
+4. Watch the ring around the gain as you speak loudly. Ideally it will stay green and stay out of the red.`,
+        clip: null
     }
 ];

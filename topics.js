@@ -184,5 +184,14 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
         instructions: `1. Click the Recording track to select it.
 2. In the Track settings in the lower half of the screen, on the Input dropdown, make sure 1 (Scarlett Solo USB) is selected.`,
         clip: "preparing-to-record.mp4"
+    },
+    {
+        category: "Recording",
+        title: "Microphone setup",
+        instructions: `1. Plug in the microphone.
+2. Turn on 48v.
+3. Plug in your headphones to the Scarlett.
+4. Turn on Direct Monitor.`,
+        clip: null
     }
 ];

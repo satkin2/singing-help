@@ -217,5 +217,14 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
         title: "Recording a second take",
         instructions: `If you want to try singing a section again without losing your first attempt, just press Record again over the same part — GarageBand keeps each attempt as a separate "take" rather than throwing the old one away.`,
         clip: "recording-a-second-take.mp4"
+    },
+    {
+        category: "Editing",
+        title: "Adding reverb or echo to your vocal",
+        instructions: `1. Begin playback, you need to be hearing the recording.
+2. Select the Recording track.
+3. If the knobs at the bottom aren't showing, click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom.
+4. Put your mouse over the Reverb knob and use the scroll wheel on the mouse to increase or decrease the effect.`,
+        clip: "adding-reverb-or-echo-to-your-vocal.mp4"
     }
 ];

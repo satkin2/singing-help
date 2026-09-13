@@ -238,5 +238,17 @@ compression evens that out automatically.
 3. If the knobs at the bottom aren't showing, click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom.
 4. Turn up the Compressor knob a little, by putting your mouse over the knob and using the scroll wheel to turn it up or down — start small, it can sound squashed if you overdo it.`,
         clip: "smoothing-out-your-vocal-with-compression.mp4"
+    },
+    {
+        category: "Editing",
+        title: "Changing the key of the backing track",
+        instructions: `If a song doesn't quite suit your voice, you can shift the backing track up or down without changing its speed.
+
+1. Double-click the Backing track's blue block to open the editor at the bottom of the screen.
+2. Tick "Follow Tempo and Pitch".
+3. Drag the Transpose slider — each step is one semitone.
+
+Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
+        clip: "changing-the-key-of-the-backing-track.mp4"
     }
 ];

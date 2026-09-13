@@ -13,7 +13,7 @@
 const TOPICS = [
         {
         category: "Capturing",
-        title: "Go to the video",
+        title: "1. Go to the video",
         instructions: `1. Open Safari.
 2. Go to YouTube.com.
 3. Search for the video you want to capture.
@@ -23,7 +23,7 @@ const TOPICS = [
     },
     {
         category: "Capturing",
-        title: "Enter song details",
+        title: "2. Enter song details",
         instructions: `After clicking "Capture from a Video", a small window asks for the
 artist and the song title — this is how the recording gets named and
 filed, so it's worth a moment to get right.
@@ -35,7 +35,7 @@ filed, so it's worth a moment to get right.
     },
     {
         category: "Capturing",
-        title: "What happens when the capture finishes",
+        title: "3. What happens when the capture finishes",
         instructions: `Once the song ends, the video stops playing automatically (if it moves on to another video instead, that gets stopped too — either way,
 nothing for you to do).
 
@@ -46,7 +46,7 @@ GarageBand opens on the left with three tracks — Vocals, Backing, Recording �
     },
     {
         category: "Importing",
-        title: "Downloading a backing track",
+        title: "1. Downloading a backing track",
         instructions: `1. Go to a site like Karaoke Version (or wherever you get backing tracks from).
 2. Find the song you want.
 3. Download it — it'll usually land in your Downloads folder automatically.`,
@@ -54,7 +54,7 @@ GarageBand opens on the left with three tracks — Vocals, Backing, Recording �
     },
     {
         category: "Importing",
-        title: "Entering the artist and song for an import",
+        title: "2. Entering the artist and song for an import",
         instructions: `Same idea as capturing — the details you type in are how the import gets named and filed.
 
 1. Click "Import a Downloaded Backing Track".
@@ -65,14 +65,14 @@ GarageBand opens on the left with three tracks — Vocals, Backing, Recording �
     },
     {
         category: "Importing",
-        title: "What happens after importing",
+        title: "3. What happens after importing",
         instructions: `The downloaded file is moved out of your Downloads folder and filed away properly — nothing left behind to tidy up.
 GarageBand opens on the left with two tracks - Backing, Recording - and Finder opens on the right showing that folder, with one audio file and the GarageBand project inside.`,
         clip: "what-happens-after-importing.mp4"
     },
     {
         category: "GarageBand",
-        title: "Add tracks to GarageBand",
+        title: "1. Add tracks to GarageBand",
         instructions: `The Finder window shows the file(s) ready to drag in — how many depends on how this one was made. An import doesn't have a Vocals track at all, so there's one file to drag instead of two.
 
 - After a capture: drag Vocals.wav onto the Vocals track, and Backing.wav onto the Backing track.
@@ -81,7 +81,7 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "GarageBand",
-        title: "Playback in GarageBand",
+        title: "2. Playback in GarageBand",
         instructions: `A few basics for getting around while you work:
 
 1. Press the spacebar to play or pause, or press the play button.
@@ -91,14 +91,14 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "Recording",
-        title: "Preparing to record",
+        title: "1. Preparing to record",
         instructions: `1. Click the Recording track to select it.
 2. In the Track settings in the lower half of the screen, on the Input dropdown, make sure 1 (Scarlett Solo USB) is selected.`,
         clip: "preparing-to-record.mp4"
     },
     {
         category: "Recording",
-        title: "Microphone setup",
+        title: "2. Microphone setup",
         instructions: `1. Plug in the microphone.
 2. Turn on 48v.
 3. Plug in your headphones to the Scarlett.
@@ -107,7 +107,7 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "Recording",
-        title: "Setting levels",
+        title: "3. Setting levels",
         instructions: `1. Turn the Gain to around 2:30.
 2. Get about 6-8” from the microphone and speak normally.
 3. You should hear yourself in the headphones.
@@ -116,7 +116,7 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "Recording",
-        title: "Recording yourself singing",
+        title: "4. Recording yourself singing",
         instructions: `1. Click the Recording track to select it.
 2. Press the red Record button (or press R) at the top of GarageBand.
 3. Sing.
@@ -125,13 +125,13 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "Recording",
-        title: "Recording a second take",
+        title: "5. Recording a second take",
         instructions: `If you want to try singing a section again without losing your first attempt, just press Record again over the same part — GarageBand keeps each attempt as a separate "take" rather than throwing the old one away.`,
         clip: "recording-a-second-take.mp4"
     },
     {
         category: "Recording",
-        title: "Doubling your voice for a fuller sound",
+        title: "6. Doubling your voice for a fuller sound",
         instructions: `Want a bigger, fuller sound on the chorus (or the whole song)?
 
 1. Add a second Recording track.
@@ -141,7 +141,7 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "Editing",
-        title: "Adding reverb to your vocal",
+        title: "1. Adding reverb to your vocal",
         instructions: `1. Begin playback, you need to be hearing the recording.
 2. Select the Recording track.
 3. If the knobs at the bottom aren't showing, click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom.
@@ -150,7 +150,7 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
     },
     {
         category: "Editing",
-        title: "Smoothing out your vocal with compression",
+        title: "2. Smoothing out your vocal with compression",
         instructions: `If some words come out louder or quieter than others, a touch of
 compression evens that out automatically.
 
@@ -162,7 +162,7 @@ compression evens that out automatically.
     },
     {
         category: "Editing",
-        title: "Changing the key of the backing track",
+        title: "3. Changing the key of the backing track",
         instructions: `If a song doesn't quite suit your voice, you can shift the backing track up or down without changing its speed.
 
 1. Double-click the Backing track's blue block to open the editor at the bottom of the screen.
@@ -174,20 +174,20 @@ Only do this to the Backing track, not your own recording — shifting a real vo
     },
     {
         category: "Editing",
-        title: "Balancing the backing track and your vocal",
+        title: "4. Balancing the backing track and your vocal",
         instructions: `1. Click on the Backing track to select it.
 2. Drag its volume slider (on the left side of the track) up or down until the balance with your voice feels right.`,
         clip: "balancing-the-backing-track-and-your-vocal.mp4"
     },
     {
         category: "Editing",
-        title: "Undoing a mistake",
+        title: "5. Undoing a mistake",
         instructions: `Pressed the wrong button, or don't like what just happened? Press Command + Z to undo — you can press it more than once to go back further.`,
         clip: null
     },
     {
         category: "Finishing up",
-        title: "Adding a finished song to Apple Music",
+        title: "1. Adding a finished song to Apple Music",
         instructions: `Once you're happy with a recording, you can add it to your Music library so it's there on your iPad and iPhone too, not just this Mac.
 
 1. In GarageBand, open the Share menu and choose "Song to Music".
@@ -202,13 +202,13 @@ Only do this to the Backing track, not your own recording — shifting a real vo
     },
     {
         category: "Using Singing Capture",
-        title: "What the pills next to each entry mean",
+        title: "1. What the pills next to each entry mean",
         instructions: `Each entry in the list has a small label showing how it was made — "Captured" for something recorded from a YouTube video, "Imported" for a downloaded backing track. If a song ever has more than one version, this is the quickest way to tell them apart at a glance.`,
         clip: "what-the-pills-next-to-each-entry-mean.mp4"
     },
     {
         category: "Using Singing Capture",
-        title: "Deleting a recording you don't want",
+        title: "2. Deleting a recording you don't want",
         instructions: `Made a duplicate, or a test you don't need to keep? You can remove it straight from the list.
 
 1. Find the entry in Singing Capture's list.
@@ -218,37 +218,37 @@ Only do this to the Backing track, not your own recording — shifting a real vo
     },
     {
         category: "Troubleshooting",
-        title: "It says GarageBand needs to be closed",
+        title: "1. It says GarageBand needs to be closed",
         instructions: `Both Capture and Import need GarageBand closed before they start, so nothing gets confused if you're partway through an earlier recording. Just quit GarageBand and try the button again.`,
         clip: "it-says-garageband-needs-to-be-closed.mp4"
     },
     {
         category: "Troubleshooting",
-        title: "Last Interface Error",
+        title: "2. Last Interface Error",
         instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
         clip: "last-interface-error.mp4"
     },
     {
         category: "Troubleshooting",
-        title: "Multiple versions of the same song",
+        title: "3. Multiple versions of the same song",
         instructions: `If you download a different backing track for a song you've already captured or imported, that's absolutely fine — it gets kept separately, not replaced. If you try to import the exact same file twice, though, you'll get a message saying so, since there'd be nothing new to add.`,
         clip: null
     },
     {
         category: "Troubleshooting",
-        title: "It says this has already been done",
+        title: "4. It says this has already been done",
         instructions: `If you try to capture a video you've already captured, or import the exact same backing track file twice, you'll see a message saying so rather than it happening again. Nothing's wrong — it's just letting you know so you don't end up with an accidental duplicate.`,
         clip: null
     },
     {
         category: "Troubleshooting",
-        title: "I can't find a recording I made earlier",
+        title: "5.I can't find a recording I made earlier",
         instructions: `Everything you've captured or imported is listed in Singing Capture itself — scroll through the list to find it, then use "Show Folder" or "Open in GarageBand" on that entry.`,
         clip: null
     },
     {
         category: “Troubleshooting”,
-        title: "The Check Start warning",
+        title: "6. The Check Start warning",
         instructions: `Sometimes it's unclear whether an advert played before the video, and the capture gets flagged with an orange "check start" warning so you know to check.
 
 1. Once you've added the tracks to GarageBand, play from the beginning to check if it's captured part of an advert.

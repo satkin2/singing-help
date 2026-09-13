@@ -294,5 +294,11 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "It says GarageBand needs to be closed",
         instructions: `Both Capture and Import need GarageBand closed before they start, so nothing gets confused if you're partway through an earlier recording. Just quit GarageBand and try the button again.`,
         clip: "it-says-garageband-needs-to-be-closed.mp4"
+    },
+    {
+        category: "Troubleshooting",
+        title: "It says this has already been done",
+        instructions: `If you try to capture a video you've already captured, or import the exact same backing track file twice, you'll see a message saying so rather than it happening again. Nothing's wrong — it's just letting you know so you don't end up with an accidental duplicate.`,
+        clip: null
     }
 ];

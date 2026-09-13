@@ -128,5 +128,11 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
         title: "Multiple versions of the same song",
         instructions: `If you download a different backing track for a song you've already captured or imported, that's absolutely fine — it gets kept separately, not replaced. If you try to import the exact same file twice, though, you'll get a message saying so, since there'd be nothing new to add.`,
         clip: null
+    },
+    {
+        category: "Using Singing Capture",
+        title: "What the pills next to each entry mean",
+        instructions: `Each entry in the list has a small label showing how it was made — "Captured" for something recorded from a YouTube video, "Imported" for a downloaded backing track. If a song ever has more than one version, this is the quickest way to tell them apart at a glance.`,
+        clip: "what-the-pills-next-to-each-entry-mean.mp4"
     }
 ];

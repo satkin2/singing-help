@@ -62,6 +62,14 @@ Either way — whether you needed to trim something or not — save in GarageBan
         clip: null
     },
     {
+        category: "Importing",
+        title: "Downloading a backing track",
+        instructions: `1. Go to a site like Karaoke Version (or wherever you get backing tracks from).
+2. Find the song you want.
+3. Download it — it'll usually land in your Downloads folder automatically.`,
+        clip: "downloading-a-backing-track.mp4"
+    },
+    {
         category: "GarageBand",
         title: "Playback in GarageBand",
         instructions: `Press the spacebar to play or pause. Press Return to jump back to the very start of the song. To mute a track (e.g. to hear yourself without the original vocals), click the speaker icon on that track.`,
@@ -96,13 +104,5 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "Last Interface Error",
         instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
         clip: "last-interface-error.mp4"
-    },
-    {
-        category: "Importing",
-        title: "Downloading a backing track",
-        instructions: `1. Go to a site like Karaoke Version (or wherever you get backing tracks from).
-2. Find the song you want.
-3. Download it — it'll usually land in your Downloads folder automatically.`,
-        clip: "downloading-a-backing-track.mp4"
     }
 ];

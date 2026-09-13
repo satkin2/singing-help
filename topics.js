@@ -247,7 +247,7 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         clip: null
     },
     {
-        category: “Troubleshooting”,
+        category: "Troubleshooting",
         title: "6. The Check Start warning",
         instructions: `Sometimes it's unclear whether an advert played before the video, and the capture gets flagged with an orange "check start" warning so you know to check.
 

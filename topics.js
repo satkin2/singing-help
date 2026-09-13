@@ -95,5 +95,16 @@ filed, so it's worth a moment to get right.
 2. Type the song title.
 3. Click "Start Capture".`,
         clip: "enter-song-details.mp4"
+    },
+    {
+        category: "Capturing",
+        title: "What happens when the capture finishes",
+        instructions: `Once the song ends, the video stops playing automatically (if it moves on to another video instead, that gets stopped too — either way,
+nothing for you to do).
+
+The recorded audio is split into two files, Vocals.wav and Backing.wav, and filed into a new folder named after the artist and song (e.g. Bee Gees > Massachusetts).
+
+GarageBand opens on the left with three tracks — Vocals, Backing, Recording — and Finder opens on the right showing that folder, with the two audio files and the GarageBand project inside.`,
+        clip: "what-happens-when-the-capture-finishes.mp4"
     }
 ];

@@ -122,5 +122,11 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         instructions: `The downloaded file is moved out of your Downloads folder and filed away properly — nothing left behind to tidy up.
 GarageBand opens on the left with two tracks - Backing, Recording - and Finder opens on the right showing that folder, with one audio file and the GarageBand project inside.`,
         clip: "what-happens-after-importing.mp4"
+    },
+    {
+        category: "Troubleshooting",
+        title: "Multiple versions of the same song",
+        instructions: `If you download a different backing track for a song you've already captured or imported, that's absolutely fine — it gets kept separately, not replaced. If you try to import the exact same file twice, though, you'll get a message saying so, since there'd be nothing new to add.`,
+        clip: null
     }
 ];

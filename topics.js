@@ -134,5 +134,15 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
         title: "What the pills next to each entry mean",
         instructions: `Each entry in the list has a small label showing how it was made — "Captured" for something recorded from a YouTube video, "Imported" for a downloaded backing track. If a song ever has more than one version, this is the quickest way to tell them apart at a glance.`,
         clip: "what-the-pills-next-to-each-entry-mean.mp4"
+    },
+    {
+        category: "Using Singing Capture",
+        title: "Deleting a recording you don't want",
+        instructions: `Made a duplicate, or a test you don't need to keep? You can remove it straight from the list.
+
+1. Find the entry in Singing Capture's list.
+2. Click "Delete" on that entry.
+3. Confirm when it asks — this permanently removes the recording and its GarageBand project, so only do this once you're sure.`,
+        clip: "deleting-a-recording-you-don-t-want.mp4"
     }
 ];

@@ -167,5 +167,15 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 6. Save GarageBand (Cmd + S).
 7. Click the orange "check start" warning back in the app to clear it.`,
         clip: "the-check-start-warning.mp4"
+    },
+    {
+        category: "GarageBand",
+        title: "Playback in GarageBand",
+        instructions: `A few basics for getting around while you work:
+
+1. Press the spacebar to play or pause, or press the play button.
+2. Press Return to jump back to the very start of the song, or press the Go to Beginning button.
+3. To mute a track (e.g. to hear yourself without the original vocals), click the speaker icon on that track.`,
+        clip: "playback-in-garageband.mp4"
     }
 ];

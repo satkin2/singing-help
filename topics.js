@@ -250,5 +250,12 @@ compression evens that out automatically.
 
 Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
         clip: "changing-the-key-of-the-backing-track.mp4"
+    },
+    {
+        category: "Editing",
+        title: "Balancing the backing track and your vocal",
+        instructions: `1. Click on the Backing track to select it.
+2. Drag its volume slider (on the left side of the track) up or down until the balance with your voice feels right.`,
+        clip: "balancing-the-backing-track-and-your-vocal.mp4"
     }
 ];

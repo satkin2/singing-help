@@ -13,15 +13,6 @@
 const TOPICS = [
     {
         category: "Capturing",
-        title: "Go to the video",
-        instructions: `1. Open Safari.
-2. Go to YouTube.com.
-3. Search for the video you want to capture.
-4. When the video starts playing, press pause.`,
-        clip: "go-to-the-video.mp4"
-    },
-    {
-        category: "Capturing",
         title: "What happens when the capture finishes",
         instructions: `Once the song ends, the video stops playing automatically (if it moves on to another video instead, that gets stopped too — either way, nothing for you to do).
 

@@ -11,8 +11,7 @@
 // show up exactly as typed. Quotes don't allow that.
 
 const TOPICS = [
-    
-    {
+        {
         category: "Capturing",
         title: "Go to the video",
         instructions: `1. Open Safari.
@@ -46,64 +45,12 @@ GarageBand opens on the left with three tracks — Vocals, Backing, Recording �
         clip: "what-happens-when-the-capture-finishes.mp4"
     },
     {
-        category: "GarageBand",
-        title: "Add tracks to GarageBand",
-        instructions: `Drag Vocals.wav from the Finder window onto the Vocals track in GarageBand, and Backing.wav onto the Backing track the same way.`,
-        clip: null
-    },
-    {
-        category: "GarageBand",
-        title: "The Check Start warning",
-        instructions: `Sometimes it's unclear whether an advert played before the video, and the capture gets flagged with an orange "check start" warning so you know to check.
-
-If there was an ad: open the project in GarageBand, shift-click to select both the Vocals and Backing tracks together, then drag their front edge in to trim off the ad before you record — selecting both first keeps them in sync.
-
-Either way — whether you needed to trim something or not — save in GarageBand, then click the orange "check start" warning back in the app to clear it.`,
-        clip: null
-    },
-    {
         category: "Importing",
         title: "Downloading a backing track",
         instructions: `1. Go to a site like Karaoke Version (or wherever you get backing tracks from).
 2. Find the song you want.
 3. Download it — it'll usually land in your Downloads folder automatically.`,
         clip: "downloading-a-backing-track.mp4"
-    },
-    {
-        category: "GarageBand",
-        title: "Playback in GarageBand",
-        instructions: `Press the spacebar to play or pause. Press Return to jump back to the very start of the song. To mute a track (e.g. to hear yourself without the original vocals), click the speaker icon on that track.`,
-        clip: null
-    },
-    {
-        category: "GarageBand",
-        title: "Recording yourself singing",
-        instructions: `Click the Recording track to select it. Press the red Record button (or press R) at the top of GarageBand, then sing. Press the same button again — or the spacebar — to stop.`,
-        clip: null
-    },
-    {
-        category: "GarageBand",
-        title: "Adding reverb or echo to your vocal",
-        instructions: `Select the Recording track, then click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom. Turn up the Reverb or Echo knob to add that effect — start with a small amount and adjust to taste.`,
-        clip: null
-    },
-    {
-        category: "GarageBand",
-        title: "Changing the key of the backing track",
-        instructions: `If a song doesn't quite suit your voice, you can shift the backing track up or down without changing its speed.
-
-1. Double-click the Backing track's blue block to open the editor at the bottom of the screen.
-2. Tick "Follow Tempo and Pitch".
-3. Drag the Transpose slider — each step is one semitone. Or just click the track and press Option (⌥) + Up or Down arrow for quick shifts.
-
-Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
-        clip: null
-    },
-    {
-        category: "Troubleshooting",
-        title: "Last Interface Error",
-        instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
-        clip: "last-interface-error.mp4"
     },
     {
         category: "Importing",
@@ -124,28 +71,6 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
         clip: "what-happens-after-importing.mp4"
     },
     {
-        category: "Troubleshooting",
-        title: "Multiple versions of the same song",
-        instructions: `If you download a different backing track for a song you've already captured or imported, that's absolutely fine — it gets kept separately, not replaced. If you try to import the exact same file twice, though, you'll get a message saying so, since there'd be nothing new to add.`,
-        clip: null
-    },
-    {
-        category: "Using Singing Capture",
-        title: "What the pills next to each entry mean",
-        instructions: `Each entry in the list has a small label showing how it was made — "Captured" for something recorded from a YouTube video, "Imported" for a downloaded backing track. If a song ever has more than one version, this is the quickest way to tell them apart at a glance.`,
-        clip: "what-the-pills-next-to-each-entry-mean.mp4"
-    },
-    {
-        category: "Using Singing Capture",
-        title: "Deleting a recording you don't want",
-        instructions: `Made a duplicate, or a test you don't need to keep? You can remove it straight from the list.
-
-1. Find the entry in Singing Capture's list.
-2. Click "Delete" on that entry.
-3. Confirm when it asks — this permanently removes the recording and its GarageBand project, so only do this once you're sure.`,
-        clip: "deleting-a-recording-you-don-t-want.mp4"
-    },
-    {
         category: "GarageBand",
         title: "Add tracks to GarageBand",
         instructions: `The Finder window shows the file(s) ready to drag in — how many depends on how this one was made. An import doesn't have a Vocals track at all, so there's one file to drag instead of two.
@@ -153,20 +78,6 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 - After a capture: drag Vocals.wav onto the Vocals track, and Backing.wav onto the Backing track.
 - After an import: drag Backing.mp3 onto the Backing track — that's it, there's no Vocals track to worry about.`,
         clip: "add-tracks-to-garageband.mp4"
-    },
-    {
-        category: "GarageBand",
-        title: "The Check Start warning",
-        instructions: `Sometimes it's unclear whether an advert played before the video, and the capture gets flagged with an orange "check start" warning so you know to check.
-
-1. Once you've added the tracks to GarageBand, play from the beginning to check if it's captured part of an advert.
-2. If it has caught an advert, hold down the shift key and click on the vocals and backing tracks.
-3. You can tell if they're selected as they get a light blue bar at the top of each waveform.
-4. Hover over either waveform. On the bottom left, you'll see a strange icon, click it and drag to where the track should begin.
-5. Then click anywhere on either track and drag left, so that they start at the beginning of the play area.
-6. Save GarageBand (Cmd + S).
-7. Click the orange "check start" warning back in the app to clear it.`,
-        clip: "the-check-start-warning.mp4"
     },
     {
         category: "GarageBand",
@@ -219,8 +130,18 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
         clip: "recording-a-second-take.mp4"
     },
     {
+        category: "Recording",
+        title: "Doubling your voice for a fuller sound",
+        instructions: `Want a bigger, fuller sound on the chorus (or the whole song)?
+
+1. Add a second Recording track.
+2. Sing along with your own first take.
+3. Click on that second track to select it, then drag its volume slider (on the left side of the track — the same slider used in "Balancing the backing track and your vocal") down a little, so it sits underneath the main vocal rather than competing with it.`,
+        clip: null
+    },
+    {
         category: "Editing",
-        title: "Adding reverb or echo to your vocal",
+        title: "Adding reverb to your vocal",
         instructions: `1. Begin playback, you need to be hearing the recording.
 2. Select the Recording track.
 3. If the knobs at the bottom aren't showing, click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom.
@@ -265,16 +186,6 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         clip: null
     },
     {
-        category: "Recording",
-        title: "Doubling your voice for a fuller sound",
-        instructions: `Want a bigger, fuller sound on the chorus (or the whole song)?
-
-1. Add a second Recording track.
-2. Sing along with your own first take.
-3. Click on that second track to select it, then drag its volume slider (on the left side of the track — the same slider used in "Balancing the backing track and your vocal") down a little, so it sits underneath the main vocal rather than competing with it.`,
-        clip: null
-    },
-    {
         category: "Finishing up",
         title: "Adding a finished song to Apple Music",
         instructions: `Once you're happy with a recording, you can add it to your Music library so it's there on your iPad and iPhone too, not just this Mac.
@@ -290,10 +201,38 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         clip: "adding-a-finished-song-to-apple-music.mp4"
     },
     {
+        category: "Using Singing Capture",
+        title: "What the pills next to each entry mean",
+        instructions: `Each entry in the list has a small label showing how it was made — "Captured" for something recorded from a YouTube video, "Imported" for a downloaded backing track. If a song ever has more than one version, this is the quickest way to tell them apart at a glance.`,
+        clip: "what-the-pills-next-to-each-entry-mean.mp4"
+    },
+    {
+        category: "Using Singing Capture",
+        title: "Deleting a recording you don't want",
+        instructions: `Made a duplicate, or a test you don't need to keep? You can remove it straight from the list.
+
+1. Find the entry in Singing Capture's list.
+2. Click "Delete" on that entry.
+3. Confirm when it asks — this permanently removes the recording and its GarageBand project, so only do this once you're sure.`,
+        clip: "deleting-a-recording-you-don-t-want.mp4"
+    },
+    {
         category: "Troubleshooting",
         title: "It says GarageBand needs to be closed",
         instructions: `Both Capture and Import need GarageBand closed before they start, so nothing gets confused if you're partway through an earlier recording. Just quit GarageBand and try the button again.`,
         clip: "it-says-garageband-needs-to-be-closed.mp4"
+    },
+    {
+        category: "Troubleshooting",
+        title: "Last Interface Error",
+        instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
+        clip: "last-interface-error.mp4"
+    },
+    {
+        category: "Troubleshooting",
+        title: "Multiple versions of the same song",
+        instructions: `If you download a different backing track for a song you've already captured or imported, that's absolutely fine — it gets kept separately, not replaced. If you try to import the exact same file twice, though, you'll get a message saying so, since there'd be nothing new to add.`,
+        clip: null
     },
     {
         category: "Troubleshooting",
@@ -306,5 +245,19 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "I can't find a recording I made earlier",
         instructions: `Everything you've captured or imported is listed in Singing Capture itself — scroll through the list to find it, then use "Show Folder" or "Open in GarageBand" on that entry.`,
         clip: null
+    },
+    {
+        category: “Troubleshooting”,
+        title: "The Check Start warning",
+        instructions: `Sometimes it's unclear whether an advert played before the video, and the capture gets flagged with an orange "check start" warning so you know to check.
+
+1. Once you've added the tracks to GarageBand, play from the beginning to check if it's captured part of an advert.
+2. If it has caught an advert, hold down the shift key and click on the vocals and backing tracks.
+3. You can tell if they're selected as they get a light blue bar at the top of each waveform.
+4. Hover over either waveform. On the bottom left, you'll see a strange icon, click it and drag to where the track should begin.
+5. Then click anywhere on either track and drag left, so that they start at the beginning of the play area.
+6. Save GarageBand (Cmd + S).
+7. Click the orange "check start" warning back in the app to clear it.`,
+        clip: "the-check-start-warning.mp4"
     }
 ];

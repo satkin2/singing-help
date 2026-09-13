@@ -177,5 +177,12 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 2. Press Return to jump back to the very start of the song, or press the Go to Beginning button.
 3. To mute a track (e.g. to hear yourself without the original vocals), click the speaker icon on that track.`,
         clip: "playback-in-garageband.mp4"
+    },
+    {
+        category: "Recording",
+        title: "Preparing to record",
+        instructions: `1. Click the Recording track to select it.
+2. In the Track settings in the lower half of the screen, on the Input dropdown, make sure 1 (Scarlett Solo USB) is selected.`,
+        clip: "preparing-to-record.mp4"
     }
 ];

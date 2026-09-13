@@ -288,5 +288,11 @@ Only do this to the Backing track, not your own recording — shifting a real vo
 3. It'll appear in the Music app on this Mac.
 4. Give it a while and it will show up in Music on your iPhone and iPad.`,
         clip: "adding-a-finished-song-to-apple-music.mp4"
+    },
+    {
+        category: "Troubleshooting",
+        title: "It says GarageBand needs to be closed",
+        instructions: `Both Capture and Import need GarageBand closed before they start, so nothing gets confused if you're partway through an earlier recording. Just quit GarageBand and try the button again.`,
+        clip: "it-says-garageband-needs-to-be-closed.mp4"
     }
 ];

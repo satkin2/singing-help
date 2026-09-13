@@ -66,5 +66,15 @@ Either way — whether you needed to trim something or not — save in GarageBan
 
 Only do this to the Backing track, not your own recording — shifting a real voice's pitch this way tends to sound artificial.`,
         clip: null
+    },
+    {
+        category: "Capturing",
+        title: "Go to the video",
+        instructions: `1. Open Safari.
+2. Go to YouTube.com.
+3. Search for the video you want to capture.
+4. When the video starts playing, press pause.
+5. Switch back to Singing Capture and click "Capture from a Video".`,
+        clip: "go-to-the-video-1789298638.mp4"
     }
 ];

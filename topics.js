@@ -226,5 +226,17 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 3. If the knobs at the bottom aren't showing, click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom.
 4. Put your mouse over the Reverb knob and use the scroll wheel on the mouse to increase or decrease the effect.`,
         clip: "adding-reverb-or-echo-to-your-vocal.mp4"
+    },
+    {
+        category: "Editing",
+        title: "Smoothing out your vocal with compression",
+        instructions: `If some words come out louder or quieter than others, a touch of
+compression evens that out automatically.
+
+1. Begin playback, you need to be hearing the recording.
+2. Select the Recording track.
+3. If the knobs at the bottom aren't showing, click the Smart Controls button in the toolbar (it looks like a dial) to open the Smart Controls panel at the bottom.
+4. Turn up the Compressor knob a little, by putting your mouse over the knob and using the scroll wheel to turn it up or down — start small, it can sound squashed if you overdo it.`,
+        clip: "smoothing-out-your-vocal-with-compression.mp4"
     }
 ];

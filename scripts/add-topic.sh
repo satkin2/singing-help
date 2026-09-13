@@ -8,6 +8,14 @@
 # Usage: add-topic.sh <recording-path-or-"none"> <title> <category> <instructions>
 set -euo pipefail
 
+# Shortcuts' "Run Shell Script" action runs a plain, non-login shell, which
+# doesn't source ~/.zprofile — the usual place Homebrew's own installer adds
+# itself to PATH. Without this, git/gh/ffmpeg/python3 can all come back
+# "command not found" here even though they work fine in a normal Terminal
+# window. Added defensively rather than after actually hitting it on a
+# fresh machine, since it's a known Shortcuts behaviour, not a guess.
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+
 if [ "$#" -ne 4 ]; then
     echo "Usage: add-topic.sh <recording-path-or-\"none\"> <title> <category> <instructions>" >&2
     exit 1

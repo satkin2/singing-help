@@ -153,5 +153,19 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 - After a capture: drag Vocals.wav onto the Vocals track, and Backing.wav onto the Backing track.
 - After an import: drag Backing.mp3 onto the Backing track — that's it, there's no Vocals track to worry about.`,
         clip: "add-tracks-to-garageband.mp4"
+    },
+    {
+        category: "GarageBand",
+        title: "The Check Start warning",
+        instructions: `Sometimes it's unclear whether an advert played before the video, and the capture gets flagged with an orange "check start" warning so you know to check.
+
+1. Once you've added the tracks to GarageBand, play from the beginning to check if it's captured part of an advert.
+2. If it has caught an advert, hold down the shift key and click on the vocals and backing tracks.
+3. You can tell if they're selected as they get a light blue bar at the top of each waveform.
+4. Hover over either waveform. On the bottom left, you'll see a strange icon, click it and drag to where the track should begin.
+5. Then click anywhere on either track and drag left, so that they start at the beginning of the play area.
+6. Save GarageBand (Cmd + S).
+7. Click the orange "check start" warning back in the app to clear it.`,
+        clip: "the-check-start-warning.mp4"
     }
 ];

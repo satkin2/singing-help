@@ -202,5 +202,14 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 3. You should hear yourself in the headphones.
 4. Watch the ring around the gain as you speak loudly. Ideally it will stay green and stay out of the red.`,
         clip: null
+    },
+    {
+        category: "Recording",
+        title: "Recording yourself singing",
+        instructions: `1. Click the Recording track to select it.
+2. Press the red Record button (or press R) at the top of GarageBand.
+3. Sing.
+4. Press the same button again — or the spacebar — to stop.`,
+        clip: "recording-yourself-singing.mp4"
     }
 ];

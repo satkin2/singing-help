@@ -211,5 +211,11 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 3. Sing.
 4. Press the same button again — or the spacebar — to stop.`,
         clip: "recording-yourself-singing.mp4"
+    },
+    {
+        category: "Recording",
+        title: "Recording a second take",
+        instructions: `If you want to try singing a section again without losing your first attempt, just press Record again over the same part — GarageBand keeps each attempt as a separate "take" rather than throwing the old one away.`,
+        clip: "recording-a-second-take.mp4"
     }
 ];

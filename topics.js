@@ -263,5 +263,15 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "Undoing a mistake",
         instructions: `Pressed the wrong button, or don't like what just happened? Press Command + Z to undo — you can press it more than once to go back further.`,
         clip: null
+    },
+    {
+        category: "Recording",
+        title: "Doubling your voice for a fuller sound",
+        instructions: `Want a bigger, fuller sound on the chorus (or the whole song)?
+
+1. Add a second Recording track.
+2. Sing along with your own first take.
+3. Click on that second track to select it, then drag its volume slider (on the left side of the track — the same slider used in "Balancing the backing track and your vocal") down a little, so it sits underneath the main vocal rather than competing with it.`,
+        clip: null
     }
 ];

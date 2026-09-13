@@ -273,5 +273,20 @@ Only do this to the Backing track, not your own recording — shifting a real vo
 2. Sing along with your own first take.
 3. Click on that second track to select it, then drag its volume slider (on the left side of the track — the same slider used in "Balancing the backing track and your vocal") down a little, so it sits underneath the main vocal rather than competing with it.`,
         clip: null
+    },
+    {
+        category: "Finishing up",
+        title: "Adding a finished song to Apple Music",
+        instructions: `Once you're happy with a recording, you can add it to your Music library so it's there on your iPad and iPhone too, not just this Mac.
+
+1. In GarageBand, open the Share menu and choose "Song to Music".
+2. Fill in the details it asks for:
+   - Song: the song title
+   - Artist: [Dad's name]
+   - Album: [something consistent, e.g. "[Dad's name]'s Songs"] — using
+     the same album name every time is what groups all your recordings together neatly in one place.
+3. It'll appear in the Music app on this Mac.
+4. Give it a while and it will show up in Music on your iPhone and iPad.`,
+        clip: "adding-a-finished-song-to-apple-music.mp4"
     }
 ];

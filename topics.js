@@ -144,5 +144,14 @@ GarageBand opens on the left with two tracks - Backing, Recording - and Finder o
 2. Click "Delete" on that entry.
 3. Confirm when it asks — this permanently removes the recording and its GarageBand project, so only do this once you're sure.`,
         clip: "deleting-a-recording-you-don-t-want.mp4"
+    },
+    {
+        category: "GarageBand",
+        title: "Add tracks to GarageBand",
+        instructions: `The Finder window shows the file(s) ready to drag in — how many depends on how this one was made. An import doesn't have a Vocals track at all, so there's one file to drag instead of two.
+
+- After a capture: drag Vocals.wav onto the Vocals track, and Backing.wav onto the Backing track.
+- After an import: drag Backing.mp3 onto the Backing track — that's it, there's no Vocals track to worry about.`,
+        clip: "add-tracks-to-garageband.mp4"
     }
 ];

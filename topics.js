@@ -24,13 +24,26 @@ const TOPICS = [
     },
     {
         category: "Capturing",
-        title: "What happens when the capture finishes",
-        instructions: `Once the song ends, the video stops playing automatically (if it moves on to another video instead, that gets stopped too — either way, nothing for you to do).
+        title: "Enter song details",
+        instructions: `After clicking "Capture from a Video", a small window asks for the
+artist and the song title — this is how the recording gets named and
+filed, so it's worth a moment to get right.
 
-The recorded audio is split into two files, Vocals.wav and Backing.wav, and filed into a new folder named after the artist and song (e.g. Coldplay > Sunshine On Leith).
+1. Type the artist's name (e.g. "Elvis Presley", not "elvis").
+2. Type the song title.
+3. Click "Start Capture".`,
+        clip: "enter-song-details.mp4"
+    },
+    {
+        category: "Capturing",
+        title: "What happens when the capture finishes",
+        instructions: `Once the song ends, the video stops playing automatically (if it moves on to another video instead, that gets stopped too — either way,
+nothing for you to do).
+
+The recorded audio is split into two files, Vocals.wav and Backing.wav, and filed into a new folder named after the artist and song (e.g. Bee Gees > Massachusetts).
 
 GarageBand opens on the left with three tracks — Vocals, Backing, Recording — and Finder opens on the right showing that folder, with the two audio files and the GarageBand project inside.`,
-        clip: null
+        clip: "what-happens-when-the-capture-finishes.mp4"
     },
     {
         category: "GarageBand",
@@ -83,28 +96,5 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "Last Interface Error",
         instructions: `All this error means is that the StudioDock’s aren’t turned on.  Press OK to dismiss.`,
         clip: "last-interface-error.mp4"
-    },
-    {
-        category: "Capturing",
-        title: "Enter song details",
-        instructions: `After clicking "Capture from a Video", a small window asks for the
-artist and the song title — this is how the recording gets named and
-filed, so it's worth a moment to get right.
-
-1. Type the artist's name (e.g. "Elvis Presley", not "elvis").
-2. Type the song title.
-3. Click "Start Capture".`,
-        clip: "enter-song-details.mp4"
-    },
-    {
-        category: "Capturing",
-        title: "What happens when the capture finishes",
-        instructions: `Once the song ends, the video stops playing automatically (if it moves on to another video instead, that gets stopped too — either way,
-nothing for you to do).
-
-The recorded audio is split into two files, Vocals.wav and Backing.wav, and filed into a new folder named after the artist and song (e.g. Bee Gees > Massachusetts).
-
-GarageBand opens on the left with three tracks — Vocals, Backing, Recording — and Finder opens on the right showing that folder, with the two audio files and the GarageBand project inside.`,
-        clip: "what-happens-when-the-capture-finishes.mp4"
     }
 ];

@@ -257,5 +257,11 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         instructions: `1. Click on the Backing track to select it.
 2. Drag its volume slider (on the left side of the track) up or down until the balance with your voice feels right.`,
         clip: "balancing-the-backing-track-and-your-vocal.mp4"
+    },
+    {
+        category: "Editing",
+        title: "Undoing a mistake",
+        instructions: `Pressed the wrong button, or don't like what just happened? Press Command + Z to undo — you can press it more than once to go back further.`,
+        clip: null
     }
 ];

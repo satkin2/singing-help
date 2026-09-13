@@ -300,5 +300,11 @@ Only do this to the Backing track, not your own recording — shifting a real vo
         title: "It says this has already been done",
         instructions: `If you try to capture a video you've already captured, or import the exact same backing track file twice, you'll see a message saying so rather than it happening again. Nothing's wrong — it's just letting you know so you don't end up with an accidental duplicate.`,
         clip: null
+    },
+    {
+        category: "Troubleshooting",
+        title: "I can't find a recording I made earlier",
+        instructions: `Everything you've captured or imported is listed in Singing Capture itself — scroll through the list to find it, then use "Show Folder" or "Open in GarageBand" on that entry.`,
+        clip: null
     }
 ];

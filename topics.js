@@ -115,5 +115,12 @@ Only do this to the Backing track, not your own recording — shifting a real vo
 3. Type the song title.
 4. Click "Import".`,
         clip: "entering-the-artist-and-song-for-an-import.mp4"
+    },
+    {
+        category: "Importing",
+        title: "What happens after importing",
+        instructions: `The downloaded file is moved out of your Downloads folder and filed away properly — nothing left behind to tidy up.
+GarageBand opens on the left with two tracks - Backing, Recording - and Finder opens on the right showing that folder, with one audio file and the GarageBand project inside.`,
+        clip: "what-happens-after-importing.mp4"
     }
 ];
